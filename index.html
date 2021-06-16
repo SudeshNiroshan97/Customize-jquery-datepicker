@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    
+    <title>  Calendar</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+<script type="text/javascript">
+
+   
+$(document).ready(function(){
+
+   
+$('#DisableWK').datepicker({
+  
+  showOn: "button",
+  buttonImage: "images/calendar.png",
+  buttonImageOnly: true,
+  buttonText: "Select date",
+
+  
+  showWeek: true,
+  firstDay: 1,
+
+
+   rangeSelect: true,
+
+  showOtherMonths: true,
+  selectOtherMonths: true,
+
+ // dateFormat: 'yy-mm-dd',
+
+  changeMonth: true,
+  changeYear: true,
+
+ // yearRange: '1970:2050',
+
+
+
+  beforeShowDay: function(date) {
+  if(date.toString().indexOf('Sun ')!=-1)
+  return [1,'red'];else
+  return [1];
+
+  },
+
+  
+
+
+
+});
+
+  
+});
+
+    </script>
+
+  
+ </head>
+
+<body>
+
+    <input type="text" class="input-type"  id="DisableWK" value="">
+
+
+</body>
+
+
+
+</html>
+
+
